@@ -1,13 +1,13 @@
 # OpenAI Responses API
 
-A Python application that uses OpenAI's API to analyze PDF documents and answer questions about their content.
+A Python application that uses OpenAI's API to analyze PDF documents and answer questions about their content. This project demonstrates the use of OpenAI's file analysis capabilities with the GPT-4 model.
 
 ## Features
 
 - PDF document analysis using OpenAI's API
-- Question-answering capabilities based on document content
-- Environment variable configuration for API keys
-- Python 3.12+ compatibility
+- Question-answering capabilities about document content
+- Environment variable management for API keys
+- Modern Python project structure with uv package manager
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ A Python application that uses OpenAI's API to analyze PDF documents and answer 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/openai-responses-api.git
+git clone https://github.com/bmh2127/openai-responses-api.git
 cd openai-responses-api
 ```
 
@@ -35,14 +35,25 @@ source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
 uv pip install -r requirements.txt
 ```
 
-4. Create a `.env` file in the project root and add your OpenAI API key:
+## Environment Setup
+
+Create a `.env` file in the project root with your OpenAI API key:
 ```
-OPENAI_API_KEY=your_api_key_here
+OPENAI_API_KEY=your_openai_api_key
 ```
+
+## Project Structure
+
+- `main.py`: Main application code for PDF analysis and question answering
+- `pyproject.toml`: Project dependencies and metadata
+- `uv.lock`: Lock file for dependency versions
+- `.env`: Environment variables (not tracked in git)
+- `.python-version`: Python version specification
+- PDF files: Sample documents for analysis
 
 ## Usage
 
-1. Place your PDF document in the project directory
+1. Place your PDF file(s) in the project directory
 2. Run the main script:
 ```bash
 python main.py
